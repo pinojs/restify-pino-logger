@@ -28,7 +28,9 @@ connections and 10 pipelined requests (`autocannon -c 100 -p 10 http://localhost
 
 All benchmarks where taken on a Macbook Pro 2013 (2.6GHZ i7, 16GB of RAM). 
 
-Whilst we're comparing `restify-pino-logger` against [morgan](http://npm.im/morgan), this isn't really a fair contest. 
+Whilst we're comparing `restify-pino-logger` against [`restify-logger`](http://npm.im/restify-logger) this isn't really a fair contest. 
+
+`restify-logger` sits on top of [morgan](http://npm.im/morgan).
 
 Morgan doesn't support logging arbitrary data, nor does it output JSON. Further Morgan [uses a form of `eval`](https://github.com/restifyjs/morgan/blob/5da5ff1f5446e3f3ff29d29a2d6582712612bf89/index.js#L383) to achieve high speed logging. Whilst probably safe, using `eval` at all tends to cause concern, particular when it comes to server-side JavaScript.
 
@@ -47,26 +49,22 @@ npm i restify-pino-logger --save
 ```js
 'use strict'
 
-var app = require('restify')()
-var pino = require('restify-pino-logger')()
+var restify = require('restify')
+var server = restify.createServer({name: 'app'})
 
-app.use(pino)
+server.use(require('./')())
 
-app.get('/', function (req, res) {
-  // each request has its own id
-  // so you can track the log of each request
-  // by using `req.log`
-  // the ids are cycled every 2^31 - 2
+server.get('/', function (req, res) {
   req.log.info('something else')
   res.send('hello world')
 })
 
-app.listen(3000)
+server.listen(3000)
 ```
 
 ```
 $ node example.js | pino
-[2016-03-31T16:53:21.079Z] INFO (46316 on MBP-di-Matteo): something else
+[2016-04-20T20:50:01.260Z] INFO (11809 on MacBook-Pro-4.local): something else
     req: {
       "id": 1,
       "method": "GET",
@@ -77,14 +75,14 @@ $ node example.js | pino
         "accept": "*/*"
       },
       "remoteAddress": "::1",
-      "remotePort": 64386
+      "remotePort": 55295
     }
-[2016-03-31T16:53:21.087Z] INFO (46316 on MBP-di-Matteo): request completed
+[2016-04-20T20:50:01.267Z] INFO (11809 on MacBook-Pro-4.local): request completed
     res: {
       "statusCode": 200,
-      "header": "HTTP/1.1 200 OK\r\nX-Powered-By: restify\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: 11\r\nETag: W/\"b-XrY7u+Ae7tCTyyK7j1rNww\"\r\nDate: Thu, 31 Mar 2016 16:53:21 GMT\r\nConnection: keep-alive\r\n\r\n"
+      "header": "HTTP/1.1 200 OK\r\nContent-Type: application/json\r\nContent-Length: 13\r\nDate: Wed, 20 Apr 2016 20:50:01 GMT\r\nConnection: keep-alive\r\n\r\n"
     }
-    responseTime: 10
+    responseTime: 8
     req: {
       "id": 1,
       "method": "GET",
@@ -95,7 +93,7 @@ $ node example.js | pino
         "accept": "*/*"
       },
       "remoteAddress": "::1",
-      "remotePort": 64386
+      "remotePort": 55295
     }
 ```
 

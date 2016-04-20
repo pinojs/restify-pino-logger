@@ -1,13 +1,13 @@
 'use strict'
 
-var app = require('express')()
-var pino = require('./')()
+var restify = require('restify')
+var server = restify.createServer({name: 'app'})
 
-app.use(pino)
+server.use(require('./')())
 
-app.get('/', function (req, res) {
+server.get('/', function (req, res) {
   req.log.info('something else')
   res.send('hello world')
 })
 
-app.listen(3000)
+server.listen(3000)
