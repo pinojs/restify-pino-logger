@@ -1,0 +1,41 @@
+{
+  "name": "express-pino-logger",
+  "version": "0.2.3",
+  "description": "An express middleware to log with pino",
+  "main": "logger.js",
+  "scripts": {
+    "test": "standard && tap test.js"
+  },
+  "precommit": "test",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmarkclements/restify-pino-logger.git"
+  },
+  "keywords": [
+    "express",
+    "connect",
+    "http",
+    "logger",
+    "fast",
+    "pino"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidmarkclements/restify-pino-logger/issues"
+  },
+  "homepage": "https://github.com/davidmarkclements/restify-pino-logger#readme",
+  "dependencies": {
+    "pino-http": "^1.0.1"
+  },
+  "devDependencies": {
+    "bunyan": "^1.8.0",
+    "pre-commit": "^1.1.2",
+    "restify": "^4.0.4",
+    "restify-bunyan-logger": "^2.0.7",
+    "restify-logger": "^2.0.1",
+    "split2": "^2.0.1",
+    "standard": "^6.0.8",
+    "tap": "^5.7.0"
+  },
+  "author": "David Mark Clements"
+}
