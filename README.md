@@ -52,7 +52,7 @@ npm i restify-pino-logger --save
 var restify = require('restify')
 var server = restify.createServer({name: 'app'})
 
-server.use(require('./')())
+server.use(require('restify-pino-logger')())
 
 server.get('/', function (req, res) {
   req.log.info('something else')
