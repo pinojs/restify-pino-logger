@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/davidmarkclements/restify-pino-logger#readme",
   "dependencies": {
-    "pino-http": "^1.0.1"
+    "pino-http": "^1.0.4"
   },
   "devDependencies": {
     "bunyan": "^1.8.0",
