@@ -1,7 +1,7 @@
 {
-  "name": "express-pino-logger",
-  "version": "0.2.3",
-  "description": "An express middleware to log with pino",
+  "name": "restify-pino-logger",
+  "version": "1.0.0",
+  "description": "pino logging restify middleware",
   "main": "logger.js",
   "scripts": {
     "test": "standard && tap test.js"
@@ -12,8 +12,7 @@
     "url": "git+https://github.com/davidmarkclements/restify-pino-logger.git"
   },
   "keywords": [
-    "express",
-    "connect",
+    "restify",
     "http",
     "logger",
     "fast",
