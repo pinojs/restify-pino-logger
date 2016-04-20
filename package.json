@@ -1,6 +1,6 @@
 {
   "name": "restify-pino-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "pino logging restify middleware",
   "main": "logger.js",
   "scripts": {
