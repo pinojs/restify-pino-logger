@@ -7,10 +7,6 @@
     "test": "standard && tap test.js"
   },
   "precommit": "test",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidmarkclements/restify-pino-logger.git"
-  },
   "keywords": [
     "restify",
     "http",
@@ -19,10 +15,6 @@
     "pino"
   ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/davidmarkclements/restify-pino-logger/issues"
-  },
-  "homepage": "https://github.com/davidmarkclements/restify-pino-logger#readme",
   "dependencies": {
     "pino-http": "^1.0.5"
   },
