@@ -1,6 +1,6 @@
-# restify-pino-logger&nbsp;&nbsp;[![Build Status](https://travis-ci.org/davidmarkclements/restify-pino-logger.svg)](https://travis-ci.org/davidmarkclements/restify-pino-logger)
+# restify-pino-logger&nbsp;&nbsp;[![Build Status](https://travis-ci.org/pinojs/restify-pino-logger.svg)](https://travis-ci.org/pinojs/restify-pino-logger)
 
-[pino](https://github.com/mcollina/pino) logging [restify](http://npm.im/restify) middleware
+[pino](https://github.com/pinojs/pino) logging [restify](http://npm.im/restify) middleware
 
 To our knowledge, `restify-pino-logger` is the [fastest](#benchmarks) [restify](http://npm.im/restify) logger in town.
 
@@ -15,7 +15,7 @@ To our knowledge, `restify-pino-logger` is the [fastest](#benchmarks) [restify](
 
 Benchmarks log each request/response pair while returning
 `'hello world'`, using
-[autocannon](https://github.com/mcollina/autocannon) with 100
+[autocannon](https://github.com/pinojs/autocannon) with 100
 connections and 10 pipelined requests (`autocannon -c 100 -p 10 http://localhost:3000`).
 
 * `restify.auditLogger` + `bunyan`: 5483.82 req/sec

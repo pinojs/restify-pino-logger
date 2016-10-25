@@ -28,5 +28,13 @@
     "standard": "^6.0.8",
     "tap": "^5.7.0"
   },
-  "author": "David Mark Clements"
+  "author": "David Mark Clements",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinojs/restify-pino-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pinojs/restify-pino-logger/issues"
+  },
+  "homepage": "https://github.com/pinojs/restify-pino-logger#readme"
 }
