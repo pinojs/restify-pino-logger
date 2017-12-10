@@ -16,17 +16,17 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "pino-http": "^2.0.1"
+    "pino-http": "^3.0.1"
   },
   "devDependencies": {
     "bunyan": "^1.8.0",
     "pre-commit": "^1.1.2",
-    "restify": "^4.0.4",
+    "restify": "^6.3.4",
     "restify-bunyan-logger": "^2.0.7",
     "restify-logger": "^2.0.1",
     "split2": "^2.0.1",
-    "standard": "^6.0.8",
-    "tap": "^5.7.0"
+    "standard": "^10.0.3",
+    "tap": "^11.0.0"
   },
   "author": "David Mark Clements",
   "repository": {

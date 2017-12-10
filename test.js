@@ -190,4 +190,3 @@ test('responseTime', function (t) {
     t.end()
   })
 })
-
