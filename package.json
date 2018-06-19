@@ -16,7 +16,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "pino-http": "^2.0.1"
+    "pino": "^4.17.3",
+    "pino-http": "^3.2.2"
   },
   "devDependencies": {
     "bunyan": "^1.8.0",
