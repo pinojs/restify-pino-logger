@@ -22,7 +22,7 @@
   "devDependencies": {
     "bunyan": "^1.8.0",
     "pre-commit": "^1.1.2",
-    "restify": "^4.0.4",
+    "restify": "^7.2.1",
     "restify-bunyan-logger": "^2.0.7",
     "restify-logger": "^2.0.1",
     "split2": "^2.0.1",
