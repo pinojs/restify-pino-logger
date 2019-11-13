@@ -44,7 +44,7 @@ With `restify-pino-logger` you can have features, safety **and** speed.
 npm i restify-pino-logger --save
 ```
 
-## Example
+## Usage
 
 ```js
 'use strict'
